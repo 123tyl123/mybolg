@@ -1,0 +1,12 @@
+
+> blog2@0.1.0 build
+> next build
+
+▲ Next.js 16.2.6 (Turbopack)
+
+  Creating an optimized production build ...
+Node.js fs rename failed after 101 retries with error Error: EPERM: operation not permitted, rename 'D:\workspace\blog2\.next-local\server\server-reference-manifest.json.tmp.09c43rfotjfl' -> 'D:\workspace\blog2\.next-local\server\server-reference-manifest.json'
+
+> Build error occurred
+Error: EPERM: operation not permitted, rename 'D:\workspace\blog2\.next-local\server\server-reference-manifest.json.tmp.09c43rfotjfl' -> 'D:\workspace\blog2\.next-local\server\server-reference-manifest.json'
+    at ignore-listed frames

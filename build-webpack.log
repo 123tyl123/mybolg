@@ -1,0 +1,13 @@
+
+> blog2@0.1.0 build
+> next build
+
+
+> Build error occurred
+Error: EPERM: operation not permitted, unlink 'D:\workspace\blog2\.next-local\build\chunks\node_modules_13sb.px._.js'
+    at ignore-listed frames {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'unlink',
+  path: 'D:\\workspace\\blog2\\.next-local\\build\\chunks\\node_modules_13sb.px._.js'
+}

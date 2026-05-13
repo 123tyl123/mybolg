@@ -1,0 +1,30 @@
+---
+title: "Vercel 自动部署说明"
+date: "2026-05-08"
+summary: "推送到 main 分支后，Vercel 如何自动构建并发布你的博客。"
+tags:
+  - Vercel
+  - DevOps
+  - GitHub
+---
+
+## 部署流程
+
+1. 在 GitHub 创建仓库并推送代码。
+2. 在 Vercel 导入该仓库并保持默认构建设置。
+3. 每次 `git push origin main`，Vercel 都会自动触发构建和部署。
+
+### 推荐命令
+
+```bash
+npm run lint
+npm run build
+git add .
+git commit -m "feat: update blog content"
+git push origin main
+```
+
+### 常见问题
+
+- 构建失败通常来自 frontmatter 缺失或日期格式错误。
+- 远程图片无法加载时，检查 `next.config.ts` 的 `images.remotePatterns` 配置。

@@ -1,0 +1,45 @@
+---
+title: "欢迎使用 MDX 博客"
+date: "2026-05-13"
+summary: "这是一篇示例文章，展示 frontmatter、Markdown 语法、代码高亮与标签功能。"
+tags:
+  - Next.js
+  - MDX
+  - Blog
+---
+
+## 为什么用 MDX
+
+MDX 让你在 Markdown 里直接嵌入 React 组件，这非常适合技术博客。
+
+### 功能清单
+
+- 自动读取 `content/posts/*.mdx`
+- 根据 frontmatter 生成标题、日期、摘要与标签
+- 支持代码高亮、暗黑模式、响应式布局
+
+### 代码片段
+
+```tsx
+type PostMeta = {
+  title: string;
+  date: string;
+  summary: string;
+  tags: string[];
+};
+
+export function sortPosts(posts: PostMeta[]) {
+  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+```
+
+### 表格
+
+| 能力 | 状态 |
+| --- | --- |
+| 首页 | 完成 |
+| 列表页 | 完成 |
+| 详情页 | 完成 |
+| 标签 + 搜索 | 完成 |
+
+> 你可以直接在这篇文章里继续补充内容，热更新会立即生效。
