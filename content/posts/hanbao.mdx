@@ -1,0 +1,49 @@
+---
+title: "🍔"
+date: "2026-05-13"
+summary: "我爱吃汉堡。"
+tags:
+  - CSS
+  - Responsive
+  - Writing
+---
+
+## 阅读节奏优先
+
+移动端上，过宽的段落和过小的点击区域会显著降低可读性。  
+这个模板默认采用窄阅读宽度、舒适行高和清晰层级。
+
+### 检查项
+
+- [x] 标题层级和段落间距可区分
+- [x] 标签按钮在触屏下可点击
+- [x] 代码块支持横向滚动
+- [x] 暗黑模式对比度不过曝
+
+### 示例代码
+
+```tsx
+from langgraph.graph import StateGraph, END
+
+# 1. 定义 State
+class State(TypedDict):
+    count: int
+
+# 2. 定义节点
+def increment(state: State) -> State:
+    return {"count": state["count"] + 1}
+
+def should_end(state: State) -> str:
+    return END if state["count"] >= 3 else "increment"
+
+# 3. 建图
+builder = StateGraph(State)
+builder.add_node("increment", increment)
+builder.set_entry_point("increment")
+builder.add_conditional_edges("increment", should_end)
+
+# 4. 编译运行
+graph = builder.compile()
+for s in graph.stream({"count": 0}):
+    print(s)
+```
