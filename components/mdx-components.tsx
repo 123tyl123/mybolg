@@ -5,7 +5,7 @@ import type { ImgHTMLAttributes } from "react";
 
 function MdxImage(props: ImgHTMLAttributes<HTMLImageElement>) {
   const { src, alt = "", width, height } = props;
-  if (!src) {
+  if (typeof src !== "string" || !src) {
     return null;
   }
 
